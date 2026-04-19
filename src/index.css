@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #000000;
+  --color-text-light: #000000;
+  --color-text-dark: #ffffff;
+  --color-accent: #2563eb;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-light text-text-light transition-colors duration-300 antialiased;
+  }
+  
+  .dark body {
+    @apply bg-bg-dark text-text-dark;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-4xl mx-auto px-6 py-24;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium opacity-50 hover:opacity-100 transition-opacity;
+  }
+
+  .paper-card {
+    @apply py-8 border-b border-gray-100 dark:border-gray-800 last:border-0;
+  }
+}
