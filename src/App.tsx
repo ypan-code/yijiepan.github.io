@@ -248,7 +248,7 @@ export default function App() {
 
             <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden grayscale">
                <img 
-                 src="IMG_0285.jpeg" 
+                 src="/IMG_0285.jpeg" 
                  alt="Yijie Pan" 
                  className="w-full h-full object-cover opacity-80"
                  referrerPolicy="no-referrer"
