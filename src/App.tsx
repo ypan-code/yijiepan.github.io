@@ -50,19 +50,19 @@ const notes = [
     title: "K-theory and the Brouwer fixed point theorem",
     date: "Nov. 2023",
     description: "Algebraic topology by Joseph Helfer. ",
-    link: "notes/Math_540_Project (3).pdf"
+    link: "./notes/Math_540_Project (3).pdf"
   },
   {
     title: "Atiyah Hirzebruch's counterexample to the integral Hodge conjecture",
     date: "Nov. 2023",
     description: "Hodge theory by Joseph Helfer. ",
-    link: "notes/Atiyah_Hirzebruch_s_Counterexample_to_the_Integral_Hodge_Conjecture (1).pdf"
+    link: "./notes/Atiyah_Hirzebruch_s_Counterexample_to_the_Integral_Hodge_Conjecture (1).pdf"
   },
   {
     title: "Representations of $\\mathfrak{sp}_4(\\mathbb{C})$",
     date: "Dec. 2024",
     description: "Representation theory by Cris Negron. ",
-    link: "notes/Representations_of_sp_4C.pdf"
+    link: "./notes/Representations_of_sp_4C.pdf"
   }
 ];
 
@@ -248,9 +248,13 @@ export default function App() {
 
             <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden grayscale">
                <img 
-                 src="IMG_0285.jpeg" 
+                 src="./IMG_0285.jpeg" 
                  alt="Yijie Pan" 
                  className="w-full h-full object-cover opacity-80"
+                 onError={(e) => {
+                   // Fallback to placeholder if user hasn't successfully uploaded the image yet
+                   (e.target as HTMLImageElement).src = "https://picsum.photos/seed/math-white/800/800";
+                 }}
                  referrerPolicy="no-referrer"
                />
             </div>
